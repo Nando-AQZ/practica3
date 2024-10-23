@@ -1,0 +1,18 @@
+.container {
+    width: 80%; /* Ancho del contenedor principal */
+    margin: auto; /* Centra el contenedor */
+}
+
+.form-container {
+    display: flex; /* Usa flexbox para alinear las columnas */
+    justify-content: space-between; /* Espacio entre las columnas */
+}
+
+.columna_izquierda, .columna_derecha {
+    width: 45%; /* Ancho de cada columna */
+}
+
+.boton {
+    text-align: center; /* Centra el botón */
+    margin-top: 20px; /* Espaciado superior para el botón */
+}

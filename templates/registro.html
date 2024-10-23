@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+    <title>Registro</title>
+</head>
+<body class="container">
+    <h1>Registro de Datos</h1>
+    <form action="{{ url_for('procesa') }}" method="POST">
+        <div class="form-container">
+            <div class="columna_izquierda">
+                <table>
+                    <tr>
+                        <td>Fecha:</td>
+                        <td><input type="date" name="fecha" required></td>
+                    </tr>
+                    <tr>
+                        <td>Nombre</td>
+                        <td><input type="text" name="nombre" required></td>
+                    </tr>
+                    <tr>
+                        <td>Apellido:</td>
+                        <td><input type="text" name="apellido" required></td>
+                    </tr>
+                    <tr>
+                        <td>Turno:</td>
+                        <td>
+                            <input type="radio" id="turno-mañana" name="turno" value="mañana" required>
+                            <label for="turno-mañana">Mañana</label><br>
+                            <input type="radio" id="turno-tarde" name="turno" value="tarde" required>
+                            <label for="turno-tarde">Tarde</label><br>
+                            <input type="radio" id="turno-noche" name="turno" value="noche" required>
+                            <label for="turno-noche">Noche</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="columna_derecha">
+                <h3>Seminario:</h3>
+                <input type="checkbox" id="seminario-1" name="seminario" value="Inteligencia artificial">
+                <label for="seminario-1">Inteligencia artificial</label><br>
+                <input type="checkbox" id="seminario-2" name="seminario" value="Machine Learning">
+                <label for="seminario-2">Machine Learning</label><br>
+                <input type="checkbox" id="seminario-3" name="seminario" value="Simulacion de Area">
+                <label for="seminario-3">Simulacion de Area</label><br>
+                <input type="checkbox" id="seminario-4" name="seminario" value="Robotica Infantil">
+                <label for="seminario-4">Robotica Infantil</label><br>
+            </div>
+        </div>
+
+        <div class="boton">
+            <input type="submit" value="Registrar">
+        </div>
+    </form>
+</body>
+</html>
